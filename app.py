@@ -1,10 +1,7 @@
-import asyncio
-import httpx
-import json
 import os
-from typing import AsyncGenerator
 
 import gradio as gr
+import httpx
 
 OLLAMA_BASE_URL = "http://localhost:11434"
 OLLAMA_API_URL = f"{OLLAMA_BASE_URL}/api/generate"
@@ -149,8 +146,8 @@ def build_ui():
     models = get_ollama_models()
     default_model = models[0] if models else DEFAULT_MODEL
 
-    with gr.Blocks(title="Ollama Notion MCP") as demo:
-        gr.Markdown("# Ollama + Notion MCP")
+    with gr.Blocks(title="Ollama Notion Integration") as demo:
+        gr.Markdown("# Ollama Notion Integration")
 
         with gr.Row():
             with gr.Column(scale=3):
